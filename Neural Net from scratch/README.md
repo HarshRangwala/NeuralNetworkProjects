@@ -81,3 +81,7 @@ def predict(network, row):
 	outputs = forward_propagate(network, row)
 	return outputs.index(max(outputs))
 ```
+
+## References
+This post was heavily inspired from:
+- [Machine Learning Mastery's excellent tutorial](https://machinelearningmastery.com/implement-backpropagation-algorithm-scratch-python/)
