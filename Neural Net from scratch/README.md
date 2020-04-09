@@ -1,17 +1,18 @@
 # NN from scratch
-To start with the easy stuff, we are going to initialize the network.
+
+To start with the easy stuff, we are going to initialize the network. <br>
 Each neuron has a set of weights that need to be maintained. One weight for each input connection and additional weight for the bias. We use dictionary to represent neurons and store properties by names such as ‘weights’ for the weights. We have organized layers as arrays of dictionaries and treat the whole network as an array of layers.
 We have initialized the weights to small random numbers ranging from 0 to 1.
-The function initialize_network() creates a new neural network ready for training. It accepts three parameters, the number of inputs, the number of neurons to have in the hidden layer and the number of outputs. 
+The function <i>initialize_network()</i> creates a new neural network ready for training. It accepts three parameters, the number of inputs, the number of neurons to have in the hidden layer and the number of outputs. 
 Running the example, the hidden layer has 1 neuron with 2 input weights plus the bias. The output layer has only two neurons.
 We can calculate the for output from a neural network by propagating the inputs to the hidden units at each layer and finally produce the output. It’s called forward-propagation.
 We first activate the neuron by providing an input. Neuron activation is calculated as the weighted sum of inputs.
 Moving on to the next stage, we need to transfer the activation to see what the neuron output really is. There is no definitive guide for which activation function works best on specific problems. It’s a trial and error process. 4 most commonly used activation functions are:
-•	Sigmoid Function (σ): g(z) = 1.0 / (1.0 + e^{-z})
+*	<b>Sigmoid Function </b> (σ): `g(z) = 1.0 / (1.0 + e^{-z})`
 The main reason why we use sigmoid function is because it exists  between (0 to 1) which makes it easier to interpret the output. It is beneficial because it prevents jumps in output values giving a smooth gradient. It is sometimes computationally expensive.
-•	Hyperbolic Tangent Function: g(z) =  (e^z -e^{-z}) / (e^z + e^{-z})
+*	<b>Hyperbolic Tangent Function</b>: `g(z) =  (e^z -e^{-z}) / (e^z + e^{-z})`
 The range of tanh function is from (-1 to 1). It is zero centered meaning that the negative inputs will be mapped strongly negative and the zero inputs will be mapped near zero in the tanh graph.
-•	Rectified Linear Unit (ReLU): g(z) = max{0,z}
+*	<b>Rectified Linear Unit (ReLU)</b>: `g(z) = max{0,z}`
 It is computationally efficient because it allows the network to converge quickly. ReLU is the most used activation function in the world right now. It is used for almost all the convolutional neural networks. The issue with the function is that the derivative is not defined at z = 0, which we can overcome by assigning the derivative to 0 at z = 0. However, when the inputs approach zero, or are negative, the gradient of the function  becomes zero, the network cannot perform backpropagation and cannot learn. 
 For this project, we are going to use sigmoid function. We can transfer an activation function using the sigmoid function as follows:
 	Output = 1.0/(1.0 + exp(-activation)
