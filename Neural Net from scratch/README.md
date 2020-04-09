@@ -91,3 +91,6 @@ This post was heavily inspired from:
 
 ## Author
 Harsh Rangwala
+
+## Message from the Author
+This NN series is under development. If you find any problem then please leave a comment.
