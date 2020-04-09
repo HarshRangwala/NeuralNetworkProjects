@@ -17,7 +17,7 @@ It is computationally efficient because it allows the network to converge quickl
 
 For this project, we are going to use sigmoid function. We can transfer an activation function using the sigmoid function as follows: <br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  `Output = 1.0/(1.0 + exp(-activation)` <br>
-```
+```python
 def forward_propagate(network, row):
 	inputs = row
 	for layer in network:
