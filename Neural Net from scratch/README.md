@@ -17,6 +17,9 @@ It is computationally efficient because it allows the network to converge quickl
 
 For this project, we are going to use sigmoid function. We can transfer an activation function using the sigmoid function as follows: <br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;`Output = 1.0/(1.0 + exp(-activation)` <br>
+
+## Forward Propagation
+
 ```python
 def forward_propagate(network, row):
 	inputs = row
@@ -30,11 +33,33 @@ def forward_propagate(network, row):
 	return inputs
  ```
 The function forward propagation is straightforward. The implements the forward propagation for a row of data from our dataset with our neural network. The neurons output is stored in the neuron named ‘output’. The outputs for the layer is then stored in the list new_input which is later stored in the input. <br>
+
+## Backpropagation 
 Further to minimize the error rate, we use backward propagation. <br>
+
+```python
+def backward_propagate_error(network, expected):
+	for i in reversed(range(len(network))):
+		layer = network[i]
+		errors = list()
+		if i != len(network)-1:
+			for j in range(len(layer)):
+				error = 0.0
+				for neuron in network[i + 1]:
+					error += (neuron['weights'][j] * neuron['delta'])
+				errors.append(error)
+		else:
+			for j in range(len(layer)):
+				neuron = layer[j]
+				errors.append(expected[j] - neuron['output'])
+		for j in range(len(layer)):
+			neuron = layer[j]
+			neuron['delta'] = errors[j] * transfer_derivative(neuron['output'])
+```
 The inputs arrive from a preconnected path. The input is modeled using randomly selected weights W. Then the output from output layer is compared with the desired output. The difference between the both is compared and travels back from the output layer to hidden layer to adjust the weights such that the error is decreased. <br>
 Below is the function that implements backpropagation.  The calculated error for each neuron is stored in ‘delta’. The layers of the network are iterated in reverse order, starting at the output and working backwards. This ensures that the ‘delta’ values are calculated first which are later used by the hidden layer. <br> 
-Once the errors are calculated, they can be used to update weights. Network weight is updated as follows:<br>
+Once the errors are calculated, they can be used to update weights. Network weight is updated as follows:<br> 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; `Weight = weight + learning_rate * error * input` <br>
-Where weight is a given weight, learning_rate is a parameter that you must specify, error is the error calculated by the backpropagation procedure for the neuron and input is the input value that caused the error.<br>
+Where weight is a given weight, learning_rate is a parameter that you must specify, error is the error calculated by the backpropagation procedure for the neuron and input is the input value that caused the error.<br> 
 During training the network, it needs a fixed number of epochs and within each epoch updating the network for each row in the training dataset. Because updates are made for each training pattern, this type of learning is called online learning. If errors were accumulated across an epoch before updating the weights, this is called batch learning or batch gradient descent. Once trained the final weights are printed and we can see that the error is decreasing. <br>
 Below is a function named <i>predict()</i> that implements this procedure. It returns the index in the network output that has the largest probability. It assumes that class values have been converted to integers starting at 0.<br>
