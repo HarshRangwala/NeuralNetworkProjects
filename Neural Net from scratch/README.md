@@ -64,3 +64,8 @@ Where weight is a given weight, learning_rate is a parameter that you must speci
 ## Training
 During training the network, it needs a fixed number of epochs and within each epoch updating the network for each row in the training dataset. Because updates are made for each training pattern, this type of learning is called online learning. If errors were accumulated across an epoch before updating the weights, this is called batch learning or batch gradient descent. Once trained the final weights are printed and we can see that the error is decreasing. <br>
 Below is a function named <i>predict()</i> that implements this procedure. It returns the index in the network output that has the largest probability. It assumes that class values have been converted to integers starting at 0.<br>
+```python
+def predict(network, row):
+	outputs = forward_propagate(network, row)
+	return outputs.index(max(outputs))
+```
