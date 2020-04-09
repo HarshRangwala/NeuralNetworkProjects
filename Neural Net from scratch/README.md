@@ -16,7 +16,7 @@ The range of tanh function is from (-1 to 1). It is zero centered meaning that t
 It is computationally efficient because it allows the network to converge quickly. ReLU is the most used activation function in the world right now. It is used for almost all the convolutional neural networks. The issue with the function is that the derivative is not defined at z = 0, which we can overcome by assigning the derivative to 0 at z = 0. However, when the inputs approach zero, or are negative, the gradient of the function  becomes zero, the network cannot perform backpropagation and cannot learn. <br>
 
 For this project, we are going to use sigmoid function. We can transfer an activation function using the sigmoid function as follows: <br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `Output = 1.0/(1.0 + exp(-activation)` <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; `Output = 1.0/(1.0 + exp(-activation)` <br>
 ```python
 def forward_propagate(network, row):
 	inputs = row
