@@ -1,8 +1,20 @@
 # NN from scratch
 
 To start with the easy stuff, we are going to initialize the network. <br>
+
 Each neuron has a set of weights that need to be maintained. One weight for each input connection and additional weight for the bias. We use dictionary to represent neurons and store properties by names such as ‘weights’ for the weights. We have organized layers as arrays of dictionaries and treat the whole network as an array of layers. <br>
+
 We have initialized the weights to small random numbers ranging from 0 to 1. <br>
+
+```python
+def initialize_network(n_inputs, n_hidden, n_outputs):
+	network = list()
+	hidden_layer = [{'weights':[random() for i in range(n_inputs + 1)]} for i in range(n_hidden)]
+	network.append(hidden_layer)
+	output_layer = [{'weights':[random() for i in range(n_hidden + 1)]} for i in range(n_outputs)]
+	network.append(output_layer)
+	return network
+```
 The function <i>initialize_network()</i> creates a new neural network ready for training. It accepts three parameters, the number of inputs, the number of neurons to have in the hidden layer and the number of outputs. <br>
 Running the example, the hidden layer has 1 neuron with 2 input weights plus the bias. The output layer has only two neurons. <br>
 We can calculate the for output from a neural network by propagating the inputs to the hidden units at each layer and finally produce the output. It’s called forward-propagation. <br>
