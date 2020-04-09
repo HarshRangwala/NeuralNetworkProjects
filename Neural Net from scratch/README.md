@@ -17,10 +17,22 @@ It is computationally efficient because it allows the network to converge quickl
 
 For this project, we are going to use sigmoid function. We can transfer an activation function using the sigmoid function as follows: <br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  `Output = 1.0/(1.0 + exp(-activation)` <br>
-The function forward propagation is straightforward. The  implements the forward propagation for a row of data from our dataset with our neural network. The neurons output is stored in the neuron named ‘output’. The outputs for the layer is then stored in the list new_input which is later stored in the input. <br>
+```
+def forward_propagate(network, row):
+	inputs = row
+	for layer in network:
+		new_inputs = []
+		for neuron in layer:
+			activation = activate(neuron['weights'], inputs)
+			neuron['output'] = transfer(activation)
+			new_inputs.append(neuron['output'])
+		inputs = new_inputs
+	return inputs
+ ```
+The function forward propagation is straightforward. The implements the forward propagation for a row of data from our dataset with our neural network. The neurons output is stored in the neuron named ‘output’. The outputs for the layer is then stored in the list new_input which is later stored in the input. <br>
 Further to minimize the error rate, we use backward propagation. <br>
 The inputs arrive from a preconnected path. The input is modeled using randomly selected weights W. Then the output from output layer is compared with the desired output. The difference between the both is compared and travels back from the output layer to hidden layer to adjust the weights such that the error is decreased. <br>
-Below is the function that implements backpropagation.  The calculated error for each neuron is stored in ‘delta’. The layers of the network are iterated in reverse order, starting at the output and working backwards. This ensures that the ‘delta’ values are calculated first which are later used by the hidden layer. <br>
+Below is the function that implements backpropagation.  The calculated error for each neuron is stored in ‘delta’. The layers of the network are iterated in reverse order, starting at the output and working backwards. This ensures that the ‘delta’ values are calculated first which are later used by the hidden layer. <br> 
 Once the errors are calculated, they can be used to update weights. Network weight is updated as follows:<br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `Weight = weight + learning_rate * error * input` <br>
 Where weight is a given weight, learning_rate is a parameter that you must specify, error is the error calculated by the backpropagation procedure for the neuron and input is the input value that caused the error.<br>
