@@ -85,9 +85,9 @@ def predict(network, row):
 ## References
 This post was heavily inspired from:
 - [Machine Learning Mastery](https://machinelearningmastery.com/implement-backpropagation-algorithm-scratch-python/)
-- [Backpropagation Algorithm](https://searchenterpriseai.techtarget.com/definition/backpropagation-algorithm)
 - [Missinglink.ai's 7 types of Activation Function](https://missinglink.ai/guides/neural-network-concepts/7-types-neural-network-activation-functions-right/)
-- [Neural Networks with Keras - Packt](https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781789346640/1/ch01lvl1sec14/feed-forward-propagation-from-scratch-in-python)
+- [Backpropagation Algorithm](https://searchenterpriseai.techtarget.com/definition/backpropagation-algorithm)
+- [Feed Forward propagation from scratch](https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781789346640/1/ch01lvl1sec14/feed-forward-propagation-from-scratch-in-python)
 
 ## Author
 Harsh Rangwala
