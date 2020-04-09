@@ -14,6 +14,7 @@ The main reason why we use sigmoid function is because it exists  between (0 to 
 The range of tanh function is from (-1 to 1). It is zero centered meaning that the negative inputs will be mapped strongly negative and the zero inputs will be mapped near zero in the tanh graph.
 *	<b>Rectified Linear Unit (ReLU)</b>: `g(z) = max{0,z}`
 It is computationally efficient because it allows the network to converge quickly. ReLU is the most used activation function in the world right now. It is used for almost all the convolutional neural networks. The issue with the function is that the derivative is not defined at z = 0, which we can overcome by assigning the derivative to 0 at z = 0. However, when the inputs approach zero, or are negative, the gradient of the function  becomes zero, the network cannot perform backpropagation and cannot learn. <br>
+
 For this project, we are going to use sigmoid function. We can transfer an activation function using the sigmoid function as follows: <br>
 	`Output = 1.0/(1.0 + exp(-activation)`
 The function forward propagation is straightforward. The  implements the forward propagation for a row of data from our dataset with our neural network. The neurons output is stored in the neuron named ‘output’. The outputs for the layer is then stored in the list new_input which is later stored in the input. <br>
