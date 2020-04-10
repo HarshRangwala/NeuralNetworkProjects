@@ -18,6 +18,8 @@ def initialize_network(n_inputs, n_hidden, n_outputs):
 The function <i>initialize_network()</i> creates a new neural network ready for training. It accepts three parameters, the number of inputs, the number of neurons to have in the hidden layer and the number of outputs. <br>
 Running the example, the hidden layer has 1 neuron with 2 input weights plus the bias. The output layer has only two neurons. <br>
 We can calculate the for output from a neural network by propagating the inputs to the hidden units at each layer and finally produce the output. It’s called forward-propagation. <br>
+
+## Activation Functions
 We first activate the neuron by providing an input. Neuron activation is calculated as the weighted sum of inputs. <br>
 Moving on to the next stage, we need to transfer the activation to see what the neuron output really is. There is no definitive guide for which activation function works best on specific problems. It’s a trial and error process. 4 most commonly used activation functions are: <br>
 *	<b>Sigmoid Function </b> (σ): `g(z) = 1.0 / (1.0 + e^{-z})`
