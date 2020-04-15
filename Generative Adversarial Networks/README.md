@@ -19,6 +19,7 @@ Lets supposes that we want to create a networ that can generate 200 images. How 
 
 Here's a training algorithm from the paper:
 ![Algorithm](https://github.com/HarshRangwala/NeuralNetworkProjects/blob/master/Generative%20Adversarial%20Networks/Training%20Algorithm.png)
+It can be noticed from the above algorithm that both networks are trained seperately. First, a sample noise and a real-data set is used to train the dicriminator. We can keep generator fixed during the discriminator training phase. This way we can propagate the gradients, and update the dicriminator as it learns how to recognize the generators flaws and maximize the loss function.
 
 ## Math behind Generative Adversarial Model
 A neural network <i><b>G(z)</b></i> is used to model the Generator mentioned above and the second net is <i><b>D()</b></i>.
