@@ -18,5 +18,5 @@ Lets supposes that we want to create a networ that can generate 200 images. How 
 * The second net, known as Discriminator, tried to classify if an input data is real - belong to the  datasets or fake - generated.
 
 ## Math behind Generative Adversarial Model
-[Formula](https://github.com/HarshRangwala/NeuralNetworkProjects/blob/master/Generative%20Adversarial%20Networks/GanMath.png)
 
+![GitHub Logo](https://github.com/HarshRangwala/NeuralNetworkProjects/blob/master/Generative%20Adversarial%20Networks/GanMath.png)
