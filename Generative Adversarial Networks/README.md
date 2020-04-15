@@ -7,7 +7,7 @@ This repository presents the an practical and conceptual overview of Generative 
 
 > *"The coolest idea in deep learning in the last 10 years." - Yann LeCun on GANs.*
 
-Generative Adversarial Networks (GANs) have been greeted with real excitment since their creation back in 2014 by Ian Goodfellow and his research team. Here's the [<u>Orignal paper</u>](https://arxiv.org/abs/1406.2661).
+Generative Adversarial Networks (GANs) have been greeted with real excitment since their creation back in 2014 by Ian Goodfellow and his research team. Here's the [<u>Orignal paper</u>](https://arxiv.org/abs/1406.2661). <br>
 GANs have been used for various real-life applications for text/video/images generations, photos to emojis, clothing translation, video prediction and the list goes on. 
 GANs belong to a set of <u>Generative models</u>.  These algorithms belong to the field of <u>unsupervised learning</u>, a type of machine learning algorithms which purports to uncover previously unknown patterns in data. Unsupervised learning works when there is no label given to the data. Genrative models are used to improve the real-world applications of machine learning.
 
