@@ -25,7 +25,7 @@ It can be noticed from the above algorithm that both networks are trained sepera
 A neural network <i><b>G(z)</b></i> is used to model the Generator mentioned above and the second net is <i><b>D(x)</b></i>.
 ![GAN Formula](https://github.com/HarshRangwala/NeuralNetworkProjects/blob/master/Generative%20Adversarial%20Networks/GanMath.png)
 
-Individually the two nets play a very different roles. The role of Generator is mapping the input noise variables <b>z</b> to the desired data space <b>x</b> i.e. images in our case. Where as, Discriminator will output probability of 0.5 as the output of the first net is equivalent to the real data. It is very closely related to the [minimax algorithm]() where there are two players playing against each other in a battle and are determined to win the game.
+Individually the two nets play a very different roles. The role of Generator is mapping the input noise variables <b>z</b> to the desired data space <b>x</b> i.e. images in our case. Where as, Discriminator will output probability of 0.5 as the output of the first net is equivalent to the real data. It is very closely related to the [minimax algorithm](https://en.wikipedia.org/wiki/Minimax) where there are two players playing against each other in a battle and are determined to win the game.
 
 ## References
 
