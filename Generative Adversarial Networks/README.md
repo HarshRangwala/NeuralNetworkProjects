@@ -30,5 +30,7 @@ Individually the two nets play a very different roles. The role of Generator is 
 ## References
 
 - [Introduction to GANS](https://medium.com/ai-society/gans-from-scratch-1-a-deep-introduction-with-code-in-pytorch-and-tensorflow-cb03cdcdba0f)
+
 -[Implementing GAN using Numpy](https://towardsdatascience.com/only-numpy-implementing-gan-general-adversarial-networks-and-adam-optimizer-using-numpy-with-2a7e4e032021)
+
 -[The Math behind GANs](https://towardsdatascience.com/the-math-behind-gans-generative-adversarial-networks-3828f3469d9c)
