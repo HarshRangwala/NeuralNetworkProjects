@@ -23,6 +23,12 @@ It can be noticed from the above algorithm that both networks are trained sepera
 
 ## Math behind Generative Adversarial Model
 A neural network <i><b>G(z)</b></i> is used to model the Generator mentioned above and the second net is <i><b>D()</b></i>.
-![GitHub Logo](https://github.com/HarshRangwala/NeuralNetworkProjects/blob/master/Generative%20Adversarial%20Networks/GanMath.png)
+![GAN Formula](https://github.com/HarshRangwala/NeuralNetworkProjects/blob/master/Generative%20Adversarial%20Networks/GanMath.png)
 
 Individually the two nets play a very different roles. The role of Generator is mapping the input noise variables <b>z</b> to the desired data space <b>x</b> i.e. images in our case. Where as, Discriminator will output probability of 0.5 as the output of the first net is equivalent to the real data. It is very closely related to the [minimax algorithm]() where there are two players playing against each other in a battle and are determined to win the game.
+
+## References
+
+- [Introduction to GANS](https://medium.com/ai-society/gans-from-scratch-1-a-deep-introduction-with-code-in-pytorch-and-tensorflow-cb03cdcdba0f)
+-[Implementing GAN using Numpy](https://towardsdatascience.com/only-numpy-implementing-gan-general-adversarial-networks-and-adam-optimizer-using-numpy-with-2a7e4e032021)
+-[The Math behind GANs](https://towardsdatascience.com/the-math-behind-gans-generative-adversarial-networks-3828f3469d9c)
