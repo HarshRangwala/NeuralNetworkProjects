@@ -9,5 +9,5 @@ A GPU is recommended because it can provide significantly speed up the training 
 
 | Content Image             |  Style Image |
 :-------------------------:|:-------------------------:
-![](https://github.com/HarshRangwala/NeuralNetworkProjects/blob/master/Style%20Transfer%20with%20PyTorch/cat.jpeg?v=4000&s=200)
+<img src = "https://github.com/HarshRangwala/NeuralNetworkProjects/blob/master/Style%20Transfer%20with%20PyTorch/cat.jpeg" width = "100" height = "100">
 
