@@ -1,3 +1,4 @@
+
 # NN from scratch
 
 To start with the easy stuff, we are going to initialize the network. <br>
