@@ -17,6 +17,6 @@ After training phase is complete, load the learned model weight in <b>predict.py
 You will find the generated output in ```generated_music``` folder. <br> <br>
 Thats it!! <br> <br>
 
-### Credits
+### Reference
 [next.tech for an awesome tutorial](http://next.tech/) <br>
 [Understanding LSTM networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
