@@ -9,13 +9,13 @@
 > music21
 
 ### Execution
-Make sure all the files are set with right directories.
-Run <b>training.py</b> to train the model.
-```python3 training.py```
-After training phase is complete, load the learned model weight in <b>predict.py</b> and then run using following command.
-```python3 predict.py```
-You will find the generated output in ```generated_music``` folder.
-Thats it!!
+Make sure all the files are set with right directories. <br>
+Run <b>training.py</b> to train the model.<br>
+```python3 training.py``` <br>
+After training phase is complete, load the learned model weight in <b>predict.py</b> and then run using following command. <br>
+```python3 predict.py``` <br>
+You will find the generated output in ```generated_music``` folder. <br>
+Thats it!! <br>
 
 ### Credits
 next.tech for an awesome tutorial
