@@ -121,7 +121,7 @@ def train(model, network_input, network_output):
     history = model.fit(
         network_input,
         network_output,
-        epochs=30,
+        epochs=150,
         batch_size=64,
         callbacks=callbacks_list
     )
